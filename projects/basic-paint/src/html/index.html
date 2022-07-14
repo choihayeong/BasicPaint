@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%- include('./include/inc_head.html') %>
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <%- include('./include/inc_header.html') %>
+        <!-- // -->
+        <div class="container">
+            <div class="content">
+                <div class="paint-navigation">
+                    <div class="paint-navigation__tools">
+                        <button type="button" class="btn btn--pen" title="펜" data-canvas="pen">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button type="button" class="btn btn--draw-rect" title="사각형 그리기" data-canvas="rect">
+                            <i class="far fa-square"></i>
+                        </button>
+                        <button type="button" class="btn btn--fill" title="채우기" data-canvas="fill">
+                            <i class="fas fa-brush"></i>
+                        </button>
+                        <!-- <button type="button" class="btn btn--draw-circle" data-button="circle">동그라미 그리기</button> -->
+                        <button type="reset" class="btn btn--reset" data-button="reset">reset</button>
+                    </div>
+                    <div class="paint-navigation__control d-flex input-wrap ml-auto">
+                        <input type="color" name="chosen-color" id="chosen-color" class="color-picker">
+                        <div class="range-group">
+                            <input type="range" name="chosen-px" id="chosen-px" class="range-picker" min="1" max="72" value="1">
+                            <label for="chosen-px" class="range-label">1</label>px
+                        </div>
+                        <button type="button" title="저장하기" class="btn btn--save">
+                            <i class="fas fa-save"></i>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="canvaswrap">
+                    <div class="canvas-bg"></div>
+                    <canvas id="pen-paint" class="canvas canvas--pen on" data-canvas="pen" width="750" height="750"></canvas>
+                    <canvas id="rect-paint" class="canvas canvas--rect" data-canvas="rect" width="750" height="750"></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <%- include('./include/inc_footer.html') %>
+        <!-- // -->
+    </div>
+    <script src="./assets/scripts/common.js"></script>
+</body>
+</html>

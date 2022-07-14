@@ -1,0 +1,48 @@
+@charset "UTF-8";
+@import "reset";
+@import "variables";
+
+* {box-sizing:border-box;}
+body {
+    color:$black;
+    background-color:$pointColor;
+    letter-spacing:-0.025em;
+}
+img {
+    width:100%;
+    max-width:100%;
+}
+.wrap {
+    max-width:1200px;
+    margin:0 auto;
+}
+.header {
+    padding:30px 0;
+    &__title {
+        font: {
+            size:36px;
+            weight:bold;
+        }
+        text-align:center;
+    }
+}
+// content
+.canvaswrap {
+    display:flex;
+    justify-content:center;
+}
+.canvas {
+    width:800px;
+    height:800px;
+    border: {
+        radius:10px;
+    }
+    box-shadow:1px 1px 30px rgba(0,0,0,0.1);
+}
+
+.footer {
+    padding:15px 0;
+    text-align:center;
+}
+
+@import "media";
